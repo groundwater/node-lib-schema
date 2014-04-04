@@ -1,0 +1,29 @@
+{
+  "name": "lib-schema",
+  "version": "0.0.0",
+  "description": "like schemas and stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint index.js && tap test"
+  },
+  "author": "Jacob Groundwater <groundwater@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "tap": "^0.4.8",
+    "jshint": "^2.5.0"
+  },
+  "dependencies": {
+    "lib-marshal": "^0.4.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/groundwater/node-lib-schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/groundwater/node-lib-schema/issues"
+  },
+  "homepage": "https://github.com/groundwater/node-lib-schema"
+}
