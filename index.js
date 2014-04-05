@@ -18,7 +18,7 @@ function generate(types) {
     switch(type.type){
     case 'array':
       if (!type.kind)
-        throw new Error(fmt('Array Requires "kind" key in "%s"', key));
+        throw new Error(fmt('Array Requires "kind" Key in "%s"', key));
       kind = out[type.kind];
       if (!kind)
         throw new Error(fmt('Required Type "%s" Undefined in "%s"', type.kind, key));
