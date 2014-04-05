@@ -26,7 +26,7 @@ function generate(types) {
       break;
     case 'map':
       if (!type.kind)
-        throw new Error(fmt('Map Requires "kind" key in "%s"', key));
+        throw new Error(fmt('Map Requires "kind" Key in "%s"', key));
       kind = out[type.kind];
       if (!kind)
         throw new Error(fmt('Required Type "%s" Undefined in "%s"', type.kind, key));
