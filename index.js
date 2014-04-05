@@ -41,7 +41,11 @@ function generate(types) {
         if (!out[keyType])
           throw new Error(fmt('Required Type "%s" Undefined in "%s"', keyType, key));
 
-        out[key].add(name, out[keyType]);
+        var required = type.require && (type.require.indexOf(name) > -1);
+
+        if (required) out[key].addRequired(name, out[keyType]);
+        else          out[key].add(name, out[keyType]);
+
       });
       break;
     default:
