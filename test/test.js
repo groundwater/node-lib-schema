@@ -21,3 +21,12 @@ test("this should work", function (t) {
   generate(types);
   t.end();
 });
+
+test("unknown type", function (t) {
+  t.throws(function () {
+    generate({
+      a: {type: 'foo'}
+    });
+  }, new Error("Unknown Type"));
+  t.end();
+});
