@@ -34,7 +34,7 @@ function generate(types) {
       break;
     case 'struct':
       out[key] = new marshal.StructType();
-      if (!type.props) throw new Error('Struct Requires "props" Key');
+      if (!type.props) throw new Error(fmt('Struct Requires "props" Key in "%s"', key));
       Object.keys(type.props).forEach(function (name) {
         var keyType = type.props[name];
 
