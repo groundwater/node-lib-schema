@@ -1,6 +1,6 @@
 {
   "name": "lib-schema",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "like schemas and stuff",
   "main": "index.js",
   "scripts": {
