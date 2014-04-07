@@ -16,6 +16,12 @@ function generate(types) {
 
     var kind;
     switch(type.type){
+    case 'nullable':
+      if (!type.kind)
+        throw new Error(fmt('Nullable Requires "kind" Key in "%s"', key));
+      kind = out[type.kind];
+      out[key] = new marshal.Nullable(kind);
+      break;
     case 'array':
       if (!type.kind)
         throw new Error(fmt('Array Requires "kind" Key in "%s"', key));
