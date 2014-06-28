@@ -12,13 +12,15 @@ Define a *json* schema
 
 ```json
 {
+  "uid" : {"type": "number", "opts": {"min": 0}},
+  "gid" : {"type": "number", "opts": {"min": 0}},
   "args": {"type": "array" , "kind": "string"},
   "envs": {"type": "map"   , "kind": "string"},
   "task": {"type": "struct", "props": {
       "exec" : "string",
       "args" : "args",
-      "uid"  : "number",
-      "gid"  : "string",
+      "uid"  : "uid",
+      "gid"  : "gid",
       "envs" : "envs"
     }, "require": ["exec", "args"]
   },
