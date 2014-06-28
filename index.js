@@ -47,6 +47,10 @@ function generate(types) {
 
       out[key] = new marshal.StringType(opts);
       break;
+    case 'number':
+      var opts = type.opts || {};
+      out[key] = new marshal.NumberType(opts);
+      break;
     case 'struct':
       out[key] = new marshal.StructType();
       if (!type.props) throw new Error(fmt('Struct Requires "props" Key in "%s"', key));
