@@ -8,7 +8,7 @@ npm install --save lib-schema
 
 ## usage
 
-Define a schema
+Define a *json* schema
 
 ```json
 {
@@ -49,6 +49,11 @@ types.job.marshal({
   ]
 }); // throws because args is required parameter
 ```
+
+## details
+
+- types *string* and *number* are build in
+- all other types must be declared before they're used
 
 ## see also
 

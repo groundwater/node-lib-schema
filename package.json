@@ -4,16 +4,15 @@
   "description": "like schemas and stuff",
   "main": "index.js",
   "scripts": {
-    "test": "jshint index.js && tap test"
+    "test": "tap test"
   },
   "author": "Jacob Groundwater <groundwater@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "tap": "^0.4.8",
-    "jshint": "^2.5.0"
+    "tap": "^0.4.8"
   },
   "dependencies": {
-    "lib-marshal": "^0.5.0"
+    "lib-marshal": "^0.6.1"
   },
   "directories": {
     "test": "test"

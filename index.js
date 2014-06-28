@@ -38,6 +38,15 @@ function generate(types) {
         throw new Error(fmt('Required Type "%s" Undefined in "%s"', type.kind, key));
       out[key] = new marshal.MapType(kind);
       break;
+    case 'string':
+      var opts = type.opts || {};
+
+      // create regular expression from strings
+      if (opts.match &&  typeof opts.match === 'string')
+        opts.match = new RegExp(opts.match);
+
+      out[key] = new marshal.StringType(opts);
+      break;
     case 'struct':
       out[key] = new marshal.StructType();
       if (!type.props) throw new Error(fmt('Struct Requires "props" Key in "%s"', key));
