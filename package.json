@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test-node && npm run test-browser",
-    "test-node": "tap test",
+    "test-node": "tape test/*.js",
     "test-browser": "browserify test/*.js | testling"
   },
   "author": "Jacob Groundwater <groundwater@gmail.com>",
