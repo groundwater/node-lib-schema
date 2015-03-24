@@ -1,4 +1,4 @@
-var test = require('tap').test;
+var test = require('tape').test;
 var generate = require('../index.js');
 
 test("struct type with require", function (t) {

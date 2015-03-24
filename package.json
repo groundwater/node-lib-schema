@@ -4,12 +4,16 @@
   "description": "like schemas and stuff",
   "main": "index.js",
   "scripts": {
-    "test": "tap test"
+    "test": "npm run test-node && npm run test-browser",
+    "test-node": "tap test",
+    "test-browser": "browserify test/*.js | testling"
   },
   "author": "Jacob Groundwater <groundwater@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "tap": "^0.4.8"
+    "browserify": "^9.0.3",
+    "tape": "^3.5.0",
+    "testling": "^1.7.1"
   },
   "dependencies": {
     "lib-marshal": "^0.6.1"
