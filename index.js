@@ -7,6 +7,7 @@ function generate(types) {
   var out = {
     string: new marshal.StringType(),
     number: new marshal.NumberType(),
+    json  : new marshal.JsonType(),
   };
 
   Object.keys(types).forEach(function (key) {
@@ -16,6 +17,9 @@ function generate(types) {
 
     var kind;
     switch(type.type){
+    case 'json':
+      out[key] = new marshal.JsonType()
+      break
     case 'nullable':
       if (!type.kind)
         throw new Error(fmt('Nullable Requires "kind" Key in "%s"', key));

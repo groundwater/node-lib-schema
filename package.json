@@ -16,7 +16,7 @@
     "testling": "^1.7.1"
   },
   "dependencies": {
-    "lib-marshal": "^0.6.1"
+    "lib-marshal": "^0.8.0"
   },
   "directories": {
     "test": "test"
